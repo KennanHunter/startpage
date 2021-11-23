@@ -1,3 +1,8 @@
+# Personal Changes
+
+-   Converted cat.gif to webm for performance
+-   Implemented wal coloring
+
 # Startpage
 
 Custom browser startpage:
