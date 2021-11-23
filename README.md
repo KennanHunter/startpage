@@ -1,22 +1,10 @@
-# Personal Changes
-
--   Converted cat.gif to webm for performance
--   Implemented wal coloring
-
 # Startpage
 
-Custom browser startpage:
-
 -   Font: Fira Code
--   Colorscheme: Gruvbox Dark
+-   Colorscheme: Determined by [Pywal](https://github.com/dylanaraps/pywal)
 -   Cat Gif: [Here](https://twitter.com/avogado6/status/1165595520967954432?s=19)
+-   Converted cat.gif to webm for performance
 
-[Live Preview](https://kennethcheo.github.io/startpage/)
+# Credits
 
-![startpage](startpage.gif)
-
-<p style="text-align: center;">cat</p>
-
-## Todo:
-
--   Turn blinking caret into working search bar
+[Original Fork](https://github.com/kennethcheo/startpage)
