@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>School Start Page</title>
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body onload="startTime()">
+		<div class="clockHeader">
+			<h1 id="clock"></h1>
+		</div>
+		<div class="day-container">
+			<div class="day">
+				<h2>Day 1</h2>
+				<table>
+					<tr id="header">
+						<th>Time</th>
+						<th>Class</th>
+						<th>Link</th>
+					</tr>
+					<tr>
+						<td>7:15</td>
+						<td>Strings</td>
+						<td>
+							<a href="https://nksd.instructure.com/courses/6455"
+								>Canvas</a
+							>
+						</td>
+					</tr>
+					<tr>
+						<td>9:02</td>
+						<td>German</td>
+						<td>
+							<a href="https://nksd.instructure.com/courses/7369"
+								>Canvas</a
+							>
+						</td>
+					</tr>
+					<tr>
+						<td>10:27</td>
+						<td>English</td>
+						<td>
+							<a href="https://nksd.instructure.com/courses/7526"
+								>Canvas</a
+							>
+						</td>
+					</tr>
+					<tr>
+						<td>12:20</td>
+						<td>Math</td>
+						<td>
+							<a href="https://nksd.instructure.com/courses/6643"
+								>Canvas</a
+							>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="day">
+				<h2>Day 2</h2>
+				<table>
+					<tr id="header">
+						<th>Time</th>
+						<th>Class</th>
+						<th>Link</th>
+					</tr>
+					<tr>
+						<td>7:15</td>
+						<td>History</td>
+						<td>
+							<a href="https://nksd.instructure.com/courses/6674"
+								>Canvas</a
+							>
+						</td>
+					</tr>
+					<tr>
+						<td>9:02</td>
+						<td>Engineering</td>
+						<td>
+							<a href="https://nksd.instructure.com/courses/7385"
+								>Canvas</a
+							>
+						</td>
+					</tr>
+					<tr>
+						<td>10:27</td>
+						<td>Gym</td>
+						<td>
+							<a href="https://nksd.instructure.com/courses/6660"
+								>Canvas</a
+							>
+						</td>
+					</tr>
+					<tr>
+						<td>12:20</td>
+						<td>Physics</td>
+						<td>
+							<a href="https://nksd.instructure.com/courses/7502"
+								>Canvas</a
+							>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<script>
+			// Copied from W3schools, as all good things are
+			function startTime() {
+				const today = new Date();
+				let h = today.getHours();
+				let m = today.getMinutes();
+				let s = today.getSeconds();
+				m = checkTime(m);
+				s = checkTime(s);
+				document.getElementById("clock").innerHTML =
+					h + ":" + m + ":" + s;
+				setTimeout(startTime, 1000);
+			}
+
+			function checkTime(i) {
+				if (i < 10) {
+					i = "0" + i;
+				} // add zero in front of numbers < 10
+				return i;
+			}
+		</script>
+	</body>
+</html>

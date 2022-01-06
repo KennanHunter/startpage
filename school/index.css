@@ -1,0 +1,35 @@
+body {
+	font-family: "Fira Code" sans-serif;
+	color: white;
+	background-color: #282828;
+}
+.day-container {
+	display: flex;
+}
+.day {
+	flex-grow: 1;
+	background-color: #1d2021;
+	padding: 0.5em;
+	margin: 0.5em;
+	text-align: center;
+}
+a {
+	color: #458588;
+}
+table {
+	width: 100%;
+}
+tr,
+td {
+	border-bottom: 1px solid grey;
+	padding: 0.5em 0.1em;
+}
+tr:hover {
+	background-color: #3c3836;
+}
+#header {
+	background-color: inherit;
+}
+.clockHeader {
+	text-align: center;
+}
