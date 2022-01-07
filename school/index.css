@@ -5,6 +5,7 @@ body {
 }
 .day-container {
 	display: flex;
+	flex-wrap: wrap;
 }
 .day {
 	flex-grow: 1;
