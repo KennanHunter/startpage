@@ -2,14 +2,14 @@
 
 html,
 body {
-	background: var(--background);
+	background: var(--background, #272822);
 	font-family: "Fira Code";
-	color: var(--color1);
+	color: var(--color1, #f92672);
 	height: 100%;
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
+	overflow: auto;
 }
 
 .container {
@@ -77,15 +77,15 @@ li {
 
 a:link {
 	text-decoration: none;
-	color: var(--color12);
+	color: var(--color8, #75715e);
 }
 
 a:visited {
-	color: var(--color8);
+	color: var(--color8, #75715e);
 }
 
 a:hover {
-	color: var(--color4);
+	color: var(--color4, #66d9ef);
 }
 
 .blinking {
