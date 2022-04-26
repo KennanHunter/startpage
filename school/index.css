@@ -1,5 +1,5 @@
 body {
-	font-family: "Fira Code" sans-serif;
+	font-family: "Fira Code", monospace, sans-serif;
 	color: white;
 	background-color: #282828;
 }
