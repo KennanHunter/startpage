@@ -12,10 +12,21 @@
 		<meta name="author" content="Kennan Hunter" />
 		<title>School Start Page</title>
 		<link rel="stylesheet" href="index.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
-	<body onload="startTime()">
+	<body onload="startTime(); checkForTsa()">
 		<div class="clockHeader">
 			<h1 id="clock"></h1>
+		</div>
+		<hr>
+		<div class="tsa-status">
+			<h2>tsa.kennan.tech</h1>
+			<h2 id="value">Loading...</h2>
 		</div>
 		<div class="day-container">
 			<div class="day">
@@ -94,7 +105,8 @@
 						<td>10:27</td>
 						<td>PLT</td>
 						<td>
-							<a href="https://kennanhunter.github.io/startpage/personal/"
+							<a
+								href="https://kennanhunter.github.io/startpage/personal/"
 								>Start</a
 							>
 						</td>
@@ -131,6 +143,34 @@
 					i = "0" + i;
 				} // add zero in front of numbers < 10
 				return i;
+			}
+
+			function checkForTsa() {
+				console.log("Checking tsa.kennan.tech");
+				const el = document.getElementById("value");
+				fetch("https://tsa.kennan.tech/api", {
+					method: "post",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({
+						query: "query Query{heartbeat}",
+					}),
+				})
+					.then((value) => {
+						return value.json();
+					})
+					.then((value) => {
+						if (value.data.heartbeat) {
+							el.innerHTML = "Online";
+							el.setAttribute("class", "successful");
+						}
+					})
+					.catch((err) => {
+						el.innerHTML = "Offline";
+						el.setAttribute("class", "failed");
+						throw err;
+					});
 			}
 		</script>
 	</body>

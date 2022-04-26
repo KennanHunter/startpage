@@ -34,3 +34,15 @@ tr:hover {
 .clockHeader {
 	text-align: center;
 }
+
+.successful {
+	color: rgb(45, 255, 17);
+}
+.failed {
+	color: red;
+}
+
+.tsa-status h1,
+.tsa-status h2 {
+	text-align: center;
+}
