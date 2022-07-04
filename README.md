@@ -10,9 +10,8 @@
 
 ## School
 
--	Colorscheme: Gruvbox
--	Clock: Stolen from [W3Schools](https://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock)
-
+-   Colorscheme: Gruvbox
+-   Clock: Stolen from [W3Schools](https://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock)
 
 # Credits
 

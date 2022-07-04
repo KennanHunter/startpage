@@ -23,18 +23,16 @@
 		<div class="clockHeader">
 			<h1 id="clock"></h1>
 		</div>
-		<hr>
+		<hr />
 		<ul>
 			<div class="website">
-				<h2>kennan.tech</h1>
+				<h2>kennan.tech</h2>
 				<h2 id="kennan.tech-status">Loading...</h2>
 			</div>
 			<div class="website">
-				<h2>tsa.kennan.tech</h1>
+				<h2>tsa.kennan.tech</h2>
 				<h2 id="tsa.kennan.tech-status">Loading...</h2>
 			</div>
-
-
 		</ul>
 		<div class="day-container">
 			<div class="day">
@@ -154,22 +152,27 @@
 			}
 
 			function checkWebsites() {
-				let websites = ["https://tsa.kennan.tech", "https://kennan.tech"]
+				let websites = [
+					"https://tsa.kennan.tech",
+					"https://kennan.tech",
+				];
 				websites.forEach((e) => {
-					const el = document.getElementById(new URL(e).hostname+"-status");
-					
-					console.log("Fetching " + e)
-					fetch(e, {
-						
-					}) .then(() => {
-						el.innerHTML="Online";
-						el.setAttribute("class", "successful");
-					}) .catch((err) => {
-						el.innerHTML = "Offline";
-						el.setAttribute("class", "failed");
-						throw err;
-					})
-				}) 
+					const el = document.getElementById(
+						new URL(e).hostname + "-status"
+					);
+
+					console.log("Fetching " + e);
+					fetch(e, {})
+						.then(() => {
+							el.innerHTML = "Online";
+							el.setAttribute("class", "successful");
+						})
+						.catch((err) => {
+							el.innerHTML = "Offline";
+							el.setAttribute("class", "failed");
+							throw err;
+						});
+				});
 			}
 		</script>
 	</body>
