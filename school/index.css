@@ -42,7 +42,16 @@ tr:hover {
 	color: red;
 }
 
-.tsa-status h1,
-.tsa-status h2 {
+.website h1,
+.website h2 {
 	text-align: center;
 }
+.website {
+	margin: 0 1em;
+}
+
+ul {
+	display: flex;
+	justify-content: center;
+}
+

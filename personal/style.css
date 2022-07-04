@@ -22,6 +22,12 @@ body {
 	min-height: 100%;
 }
 
+@media only screen and (max-width: 600px) {
+	/* .container {
+		grid-template-rows: 1fr 460px 600px 1fr;
+	} */
+}
+
 .left-container {
 	grid-area: left;
 	aspect-ratio: 1/1;
