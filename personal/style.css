@@ -3,7 +3,7 @@
 html,
 body {
 	background: var(--background, #272822);
-	font-family: "Fira Code";
+	font-family: "Fira Code, monospace";
 	color: var(--color1, #f92672);
 	height: 100%;
 	width: 100%;
@@ -72,22 +72,22 @@ body {
 }
 
 .title {
-	font-size: 20px;
+	font-size: 1.4em;
 }
 
 li {
-	font-size: 16px;
+	font-size: 1.2em;
 	list-style-type: none;
 	padding: 5px;
 }
 
 a:link {
 	text-decoration: none;
-	color: var(--color8, #75715e);
+	color: var(--color8, #ffffff);
 }
 
 a:visited {
-	color: var(--color8, #75715e);
+	color: var(--color8, #ffffff);
 }
 
 a:hover {
